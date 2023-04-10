@@ -12,8 +12,8 @@ public class Products {
     public Products() {
     }
 
-    public Products(Integer id, String productName, String productQtd, String productValor, String productCategoria) {
-        this.id = id;
+    public Products(String productName, String productQtd, String productValor, String productCategoria) {
+
         this.productName = productName;
         this.productQtd = productQtd;
         this.productValor = productValor;
@@ -22,13 +22,6 @@ public class Products {
 
 
 
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
 
     public String getProductName() {
         return productName;

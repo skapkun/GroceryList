@@ -24,8 +24,7 @@ public class ProductForm extends AppCompatActivity  {
     ProductHelper helper;
     MainActivity mainActivity;
 
-    Integer id;
-    EditText nome;
+     EditText nome;
     EditText qtd;
     EditText valor;
     EditText descricao;
@@ -63,13 +62,14 @@ public class ProductForm extends AppCompatActivity  {
                 prod.setProductValor(valor.getText().toString());
                 prod.setProductDescricao(descricao.getText().toString());
 
-                SharedPreferences prefs =  getSharedPreferences("chaveGeral", Context.MODE_PRIVATE);
+                SharedPreferences prefs =  getSharedPreferences(getString(R.string.preference_file_key), Context.MODE_PRIVATE);
+
                 SharedPreferences.Editor editor = prefs.edit();
                 editor.putString("chaveNome", nome.getText().toString());
                 editor.putString("chaveQtd", qtd.getText().toString());
                 editor.putString("chaveValor", valor.getText().toString());
                 editor.commit();
-
+             //   prod = new Products(null, nome.getText().toString(), qtd.getText().toString(), valor.getText().toString(), descricao.getText().toString());
                 mainActivity.insereLista(prod);
                  Toast.makeText(ProductForm.this, "Produto " + prod.getProductName() + " salvo!", Toast.LENGTH_SHORT).show();
 

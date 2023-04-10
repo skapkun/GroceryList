@@ -20,7 +20,13 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView listaDeProdutos;
     private Button novoProduto;
     private List<Products> productLista = new ArrayList<>();
-
+//utilizar search para buscar chave no shared
+    //vincular spinner no array
+    //alimentar recycler list com shared preferences
+    //clicar msg alert com informações dos produtos
+    //criar activity para carrinho
+    //criar os métodos para calcular total
+    //criar edt txt para usuário inserir quanto pode gastar
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
     public void criaProdutos(){
-        Products product  = new Products(null, "nome", "5", "R$100,00", "Frios");
+        Products product  = new Products("nome", "5", "R$100,00", "Frios");
         this.productLista.add(product);
 
     }
