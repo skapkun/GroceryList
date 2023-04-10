@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Grocery List</string>
+    <string-array name="medidas">
+        <item>un</item>
+        <item>ml</item>
+        <item>L</item>
+        <item>kg</item>
+        <item>g</item>
+        <item>cx</item>
+    </string-array>
+</resources>
